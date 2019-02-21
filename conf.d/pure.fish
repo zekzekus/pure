@@ -3,8 +3,8 @@ set --universal pure_version 2.1.0 # used for bug report
 # Base colors
 _pure_set_default pure_color_primary (set_color blue)
 _pure_set_default pure_color_info (set_color cyan)
-_pure_set_default pure_color_mute (set_color brblack)
-_pure_set_default pure_color_success (set_color magenta)
+_pure_set_default pure_color_mute (set_color cyan)
+_pure_set_default pure_color_success (set_color green)
 _pure_set_default pure_color_normal (set_color normal)
 _pure_set_default pure_color_danger (set_color red)
 _pure_set_default pure_color_light (set_color white)
@@ -43,7 +43,7 @@ set --global --export VIRTUAL_ENV_DISABLE_PROMPT 1
 # Print current working directory at the beginning of prompt
 # true (default):   current directory, git, user@hostname (ssh-only), command duration
 # false:            user@hostname (ssh-only), current directory, git, command duration
-_pure_set_default pure_begin_prompt_with_current_directory true
+_pure_set_default pure_begin_prompt_with_current_directory false
 
 # Show exit code of last command as a separate prompt character (cf. https://github.com/sindresorhus/pure/wiki#show-exit-code-of-last-command-as-a-separate-prompt-character)
 # false - single prompt character, default
@@ -51,7 +51,7 @@ _pure_set_default pure_begin_prompt_with_current_directory true
 _pure_set_default pure_separate_prompt_on_error false
 
 # Max execution time of a process before its run time is shown when it exits
-_pure_set_default pure_threshold_command_duration 5
+_pure_set_default pure_threshold_command_duration 10
 _pure_set_default pure_color_command_duration $pure_color_warning
 
 # Right Prompt variables
